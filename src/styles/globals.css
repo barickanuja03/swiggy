@@ -7,21 +7,11 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .main-container {
+    @apply w-full lg:max-w-[1360px] 2xl:max-w-[1536px] mx-auto px-4 md:px-6 xl:px-12 2xl:px-6 my-10 ;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .heading{
+    @apply w-full md:text-2xl font-bold mt-10 mb-10 capitalize;
   }
 }
