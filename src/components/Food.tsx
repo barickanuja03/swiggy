@@ -40,14 +40,14 @@ function Food() {
       ];
   return (
     <>
-     <div className='main-container'>
+     <div className='main-container mt-16'>
         <div className='heading'>
             whats on your mind?
         </div>
 
         <div>
         {
-          <div className="flex flex-row justify-center md:justify-evenly items-center gap-x-7 gap-y-5 flex-wrap mt-10">
+          <div className="flex flex-row justify-center md:justify-evenly items-center gap-x-7 gap-y-5 flex-wrap py-10">
           {
            foods.map((food) =>{
               return(
@@ -63,6 +63,7 @@ function Food() {
         </div>
         }
       </div>   
+      <hr className='bg-slate-100 h-1'/>
      </div> 
     </>
   )
