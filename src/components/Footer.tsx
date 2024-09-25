@@ -5,7 +5,7 @@ function Footer() {
     <>
     <div className="bg-black w-full max-h-max text-white">
      <div className='main-container '>
-        <div className='flex justify-around flex-row  flex-wrap py-11'>
+        <div className='flex justify-around flex-row  flex-wrap gap-11 py-11'>
             <div>
               <h1 className='text-2xl tracking-tighter font-extrabold capitalize'>
                  <SiSwiggy className='inline'/>Swiggy

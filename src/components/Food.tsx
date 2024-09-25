@@ -1,11 +1,13 @@
 import React from 'react'
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 function Food() {
     const foods = [
         {
           id: 1,
          image:'https://tse4.mm.bing.net/th?id=OIP.tlcWGrGvBWmKwTXhHxUV9QHaE8&pid=Api&P=0&h=180',
-         name:'Dosa'
+         name:'Dosa',
         },
         {
           id: 2,
@@ -36,8 +38,60 @@ function Food() {
             id:7,
             image:'https://tse3.mm.bing.net/th?id=OIP.bNavq7JeqsHHPHsULdhZFAHaFj&pid=Api&P=0&h=180',
             name:'chole bhature',
-          }
+          },
+          {
+            id: 8,
+           image:'https://tse4.mm.bing.net/th?id=OIP.tlcWGrGvBWmKwTXhHxUV9QHaE8&pid=Api&P=0&h=180',
+           name:'Dosa',
+          },
+          {
+            id: 9,
+            image:'https://tse2.mm.bing.net/th?id=OIP.wBu0Xsb774mtzvjhq1C3DgHaE8&pid=Api&P=0&h=180',
+            name: 'biriyani',
+          },
+          {
+            id: 10,
+            image:'https://tse2.mm.bing.net/th?id=OIP.h8pKqvjulrxJ7Hr18ZuSIgAAAA&pid=Api&P=0&h=180',
+            name: 'Idli',
+          },
       ];
+      var settings = {
+        dots: false,
+        infinite: false,
+        arrows:false,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 3000,
+        slidesToShow: 5,
+        slidesToScroll:1,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      };
   return (
     <>
      <div className='main-container mt-16'>
@@ -45,9 +99,11 @@ function Food() {
             whats on your mind?
         </div>
 
-        <div>
+        <div className='py-8'>
         {
-          <div className="flex flex-row justify-center md:justify-evenly items-center gap-x-7 gap-y-5 flex-wrap py-10">
+          // <div className="flex flex-row justify-center md:justify-evenly items-center gap-x-7 gap-y-5 flex-wrap py-10">
+             <div className="slider-container">
+             <Slider {...settings}>
           {
            foods.map((food) =>{
               return(
@@ -60,7 +116,9 @@ function Food() {
               );
             })
           }
+        </Slider>
         </div>
+        // </div>
         }
       </div>   
       <hr className='bg-slate-100 h-1'/>

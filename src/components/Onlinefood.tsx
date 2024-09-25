@@ -1,5 +1,6 @@
 import React from 'react'
 import { MdOutlineStarHalf } from "react-icons/md";
+import Navbar from './Navbar';
 function Onlinefood() {
     const foods = [
         {
@@ -235,9 +236,10 @@ function Onlinefood() {
         <div className='heading'>
         Restaurants with online food delivery in Bhubaneswar
         </div>
+        <Navbar />
         <div>
            {
-            <div className="flex flex-row justify-center md:justify-evenly items-center flex-wrap mt-10">
+            <div className="flex flex-row justify-center md:justify-evenly items-center flex-wrap ">
             {
              foods.map((food) =>{
                 return(
@@ -266,6 +268,7 @@ function Onlinefood() {
           </div>
            }
         </div>
+        <hr className='bg-slate-100 h-1'/>
       </div>
     </>
   )

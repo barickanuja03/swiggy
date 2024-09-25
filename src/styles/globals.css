@@ -6,12 +6,20 @@
   --background: #ffffff;
   --foreground: #171717;
 }
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.slick-arrow:before{
+  color: rgb(231, 12, 12);
+  font-size: 2rem;
+}
 @layer components {
   .main-container {
     @apply w-full lg:max-w-[1360px] 2xl:max-w-[1536px] mx-auto px-4 md:px-6 xl:px-12 2xl:px-6;
   }
   .heading{
-    @apply w-full text-xl md:text-2xl  font-bold mt-10 mb-10 capitalize;
+    @apply w-full text-xl md:text-2xl  font-bold mt-5 mb-5 capitalize;
   }
 }

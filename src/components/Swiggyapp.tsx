@@ -5,7 +5,7 @@ function Swiggyapp() {
     <>
     <div className='bg-slate-200'>
       <div className='main-container'>
-        <div className='flex flex-col md:flex-row justify-evenly items-center p-10'>
+        <div className='flex flex-col md:flex-row justify-evenly items-center gap-y-5 p-10'>
          <div className='text-3xl font-bold capitalize'> 
             For better experience,download the Swiggy app now
          </div>
